@@ -1,24 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "1",
-      "taskName": "read a book"
-    },
-    {
-      "id": "2",
-      "taskName": "listen to a podcast"
-    },
-    {
-      "id": "3",
-      "taskName": "study coding"
-    },
-    {
-      "id": "6dbc",
-      "taskName": "testing"
-    },
-    {
-      "id": "2d3e",
-      "taskName": "testing task 2"
-    }
-  ]
+  "tasks": []
 }
