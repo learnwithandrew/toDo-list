@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let taskContainer = document.querySelector('.toDo-list');
     let taskSubmitForm = document.getElementById('taskForm');
     let taskTitle = document.getElementById('taskTitle');
-    let taskDelete = document.getElementById('delete-button')
 
     let displayTasks = () => {
         fetch('http://localhost:3000/tasks')
@@ -12,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (tasks.length === 0) {
                     let message = document.createElement('div')
                     message.innerHTML = `
-                    <h1>No tasks yet</h1>
+                      <h1>No tasks yet</h1>
                     `;
                     taskContainer.appendChild(message);
                 } else {
@@ -20,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         let taskItem = document.createElement('div')
                         taskItem.classList.add('toDo-item')
                         taskItem.innerHTML = `
-                    <h1>${task.taskName.toUpperCase()}</h1>
-                    <div class="modify-buttons">
-                        <i class="fa fa-pencil-square" aria-hidden="true" data-id=${task.id}></i>
-                        <i class="fa fa-trash" id="delete-button" aria-hidden="true" data-id=${task.id}></i>
-                    </div>
+                        <h1>${task.taskName.toUpperCase()}</h1>
+                        <div class="modify-buttons">
+                            <i class="fa fa-pencil-square" aria-hidden="true" data-id=${task.id}></i>
+                            <i class="fa fa-trash" id="delete-button" aria-hidden="true" data-id=${task.id}></i>
+                        </div>
                 `;
                         taskContainer.appendChild(taskItem)
                     })
